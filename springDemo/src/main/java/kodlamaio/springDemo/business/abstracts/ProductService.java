@@ -9,6 +9,9 @@ import kodlamaio.springDemo.entities.concretes.Product;
 
 public interface ProductService {
 	DataResult<List<Product>> getAll();
+	DataResult<List<Product>> getAll(int pageNo, int pageSize);
+	DataResult<List<Product>> getAllSorted();
+
 	Result add(Product product);
 	
 	
@@ -24,5 +27,7 @@ public interface ProductService {
 
 	DataResult<List<Product>> getByProductNameStartsWith(String productName);
 	
-	DataResult<List<Product>> getByNameAndCategory(String productName, int categoryId);
+	DataResult<List<Product>> getByNameAndCategoryId(String productName, int categoryId);
+	
+	
 }
